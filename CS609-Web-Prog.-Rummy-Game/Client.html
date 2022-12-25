@@ -1,0 +1,92 @@
+<html>
+<head>
+<script>
+function display2(mess,dis) {
+  //create message label
+  let d = document.getElementById('div2');
+  d.innerHTML = mess
+  mkLbl(dis,"discardList")
+}
+
+let playerNum=0
+
+function display(x,hand,dis,top) {
+
+  playerNum = x
+  let d1 = document.getElementById('h1')
+  d1.innerHTML += ' '+x
+
+  //let div = document.getElementById('div')
+  //div.innerHTML = hand
+  mkLbl(hand, 'div')
+
+}
+
+
+//lst, id of the div
+function mkLbl(lst,y) {
+  d2 = document.getElementById(y)
+
+    arr = lst.split(',')
+
+    for(let i =0; i < arr.length; i++){
+      fred(arr[i],i,arr)
+    }
+}
+
+function fred(value,index,array) {
+    lbl=document.createElement('label')
+    lbl.innerHTML = value
+    lbl.setAttribute('style','border: 1px solid')
+    lbl.setAttribute('index', index)
+    lbl.setAttribute('onclick', 'console.log(this.getAttribute("index"))')
+    d2.appendChild(lbl)
+}
+
+/*function display(x,hand,dis,top) {
+  playerNum = x
+  let d1 = document.getElementById('h1')
+  d1.innerHTML += ' '+typeof(x)
+
+  let div = document.getElementById('div')
+  div.innerHTML = hand
+  
+}*/
+
+function nse() {
+  let name = document.getElementById("name")
+  let url = "http://cs.indstate.edu:60302?login="+name.value
+  d = document.getElementById('div')
+  //d.innerHTML= url
+  let nwscel = document.createElement('script')
+  nwscel.setAttribute('src', url)
+  document.head.appendChild(nwscel)
+}
+
+function nse2() {
+  let url = "http://cs.indstate.edu:60302?play="+playerNum
+  let nwscel = document.createElement('script')
+  nwscel.setAttribute('src', url)
+  document.head.appendChild(nwscel)
+}
+
+</script>
+</head>
+<body id='parent'>
+<h1 id='h1'>PLAYER</h1>
+<label>Name:</label><input type="text" id="name" name="name">
+<button type='button' onclick='nse()'>LOGIN</button>
+<br><br>
+<label>Hand: </label>
+<div id='div'></div>
+<button type='button' onclick='nse2()'>PLAY</button>
+<br><br>
+<label>Discard List: </label>
+<div id='discardList'></div>
+<br><br>
+<label>message:</label><div id='div2'></div>
+<div>
+<button type='button' onclick='showcard()'>DECK</button>
+</div>
+</body>
+</html>
