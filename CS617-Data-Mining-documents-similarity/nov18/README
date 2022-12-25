@@ -1,0 +1,8 @@
+
+to run nov18.py:
+
+python3 nov18.py /u1/class/cs61715/Files <just file name without an extension>
+
+e.g: python3 nov18.py /u1/class/cs61715/Files shinglespickle
+
+Made a list of unique files in the '/u1/class/cs61715/Files' and last updated date for the 'Files' directory is Nov 18th.

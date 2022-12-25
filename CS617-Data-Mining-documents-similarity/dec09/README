@@ -1,0 +1,28 @@
+
+
+To run dec09.py
+
+
+it takes one argument, which is a directory location where all files are located.
+
+python3 dec09.py <directory location (with directory name) of all files>
+
+e.g:
+
+python3 dec09.py /u1/class/cs61715/Project/Files
+
+
+Note:
+
+1. Program will print pairs of similar files on terminal.
+
+2. Program will also print Similar groups of files on terminal.
+
+3. The execution of program takes upto '1' minute for 1000 files.
+
+
+:::unit tested on 7 different groups of folder and those files are located at /u1/class/cs61715/Project/Testing
+
+Imp:
+If we are testing dec09.py on the number of files which is approximate to one hundred then we need to reduce 'numofrows' parameter's value in the code to get fair output. Because currently 'numofrows' has been set to 120.
+

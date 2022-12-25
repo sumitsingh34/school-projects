@@ -1,0 +1,20 @@
+
+
+TO run nov30.py:
+
+It takes two arguments:
+1. All files location (Directory name)
+2. dictionary location with file name( pickle file generated from nov18.py)
+
+e.g:
+
+python3 nov30.py /u1/class/cs61715/Files /u1/class/cs61715/Project/nov18/testpickle.pkl
+
+nov30.py will generate "bigarray.npy" in the current directory i.e nov30
+
+Note:
+
+This file(nov30.py) uses "charfunc" function from nov29.py. If we need to use other function then we need to change import location of that particular function.
+
+
+

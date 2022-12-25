@@ -1,0 +1,22 @@
+
+To run nov29.py:
+
+python3 nov29.py <a-file-location-with-name> <dictionary-location-with-name>
+
+e.g 
+
+python3 nov29.py /u1/class/cs61715/Files/file0001 /u1/class/cs61715/Project/nov18/testpickle.pkl
+
+
+To call 'charfunc' function:
+
+it takes two arguments:
+1. A single file location with name
+2. Dictionary or location of dictionary file with name
+
+e.g:
+
+charfunc(file_name, dictionary)
+
+
+
