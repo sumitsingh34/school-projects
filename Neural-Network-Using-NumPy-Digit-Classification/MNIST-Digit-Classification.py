@@ -68,8 +68,7 @@ with open('X_test.npy','wb') as fd:         # saving test data
     np.save(fd, X_test)
 
 
-# Professor's Code from twolayers.py :: Done in class
-def training_round(w1, w2, x, y, alpha):
+def training_round(w1, w2, x, y, alpha):   # training model
     
     a1 = expit(w1 @ x)
     yhat = expit(w2 @ a1)
@@ -87,7 +86,7 @@ def training_round(w1, w2, x, y, alpha):
     return predict
 
 
-def testing_round(w1, w2, x, y, answer):
+def testing_round(w1, w2, x, y, answer):    # testing model
 
     a1 = expit(w1 @ x)
     yhat = expit(w2 @ a1)
